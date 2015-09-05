@@ -23,9 +23,9 @@ This tutorial assume that mongo and node is already installed for server side.
 
 # Install Node dependencies#
 On the working folder install dependencies by executing :
-   '''
+```
    npm install
-   '''
+```
 
 ##### What am I installing ?
 
