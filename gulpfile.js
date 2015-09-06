@@ -14,7 +14,8 @@ var gulp        = require('gulp'),
     minifycss   = require('gulp-minify-css'),
     mainBowerFiles = require('main-bower-files'),
     gulpFilter  = require('gulp-filter'),
-    series = require('stream-series'),
+    series      = require('stream-series'),
+    nodemon     = require('gulp-nodemon'),
     browserSync = require('browser-sync').create();
 ///////////////////////////////////////////////////////////////
 // End of Modules 
@@ -114,6 +115,19 @@ gulp.task('angular_app', function(){
     .pipe(gulp.dest(dist+"app"));
 });
 
+// run node server
+gulp.task('nodemon', function (cb) {
+    var started = false;
+    return nodemon({
+        script: 'server.js'
+    }).on('start', function () {
+        if (!started) {
+            cb();
+            started = true; 
+        } 
+    });
+});
+
 // inject files to index.html
 gulp.task('inject', function () {
     var target = gulp.src(views + 'index.html');
@@ -149,6 +163,14 @@ gulp.task('bower', ['bower-components-css', 'bower-components-font', 'bower-comp
 // compile all source task
 gulp.task('compile', ['js_compiler', 'sass_compiler','angular_app']);
 
+//  Run browserSync
+gulp.task('browser-Sync', ['nodemon'], function() {
+    browserSync.init(null, {
+        proxy: "http://localhost:8080",
+        browser: ["google chrome", "firefox"],
+        port: 9000
+    });
+});
 
 ///////////////////////////////////////////////////////////////
 // Watch changes

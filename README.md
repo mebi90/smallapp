@@ -31,6 +31,7 @@ On the working folder install dependencies by executing :
 
 | modules      	| What it does? | 
 | ------------- |-------------:|
+| gulp-nodemon 	| allow us to run node from gulp | 
 | gulp-pipe 	| makes it easy to work with gulp |
 | gulp-jshint   | check JS files for errors in code |
 | gulp-sass    	| compile sass files |
@@ -57,6 +58,7 @@ On the working folder install dependencies by executing :
 | bower 		| packages manager |
 | del			| easy delete of files and folders |
 | stream-series | force injection order |
+
 
 bower vs npm
 bower is a package manager for fron-end
