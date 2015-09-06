@@ -31,13 +31,19 @@ On the working folder install dependencies by executing :
 
 | modules      	| What it does? | 
 | ------------- |-------------:|
+| gulp-pipe 	| makes it easy to work with gulp |
 | gulp-jshint   | check JS files for errors in code |
 | gulp-sass    	| compile sass files |
 | gulp-concat 	| concat files for distribution |
-| gulp-uglify	| compress files for distribution |
+| gulp-uglify	| compress js files for distribution |
+| gulp-minify-css| compress css files for distribution|
+| gulp-rename   | allow us to rename files |
 | gulp-watch 	| watch for file changes |
-| gulp-livereload| reload browser on file changes |
 | gulp-inject 	| injects JS and CS files |
+| gulp-flatten  | build folder without relative paths |
+| gulp-filter 	| makes filtering easy |
+| main-bower-files| grab libraries files from bower_components |
+| browser-sync  | reload browser on file changes |
 | express 		| Node framework |
 | mongoose 		| Mongodb Object modeling for node |
 | underscore 	| JS library with useful functions |
@@ -49,3 +55,9 @@ On the working folder install dependencies by executing :
 | bcrypt-nodejs | cryptography library |
 | express-session | Session middleware |
 | bower 		| packages manager |
+| del			| easy delete of files and folders |
+| stream-series | force injection order |
+
+bower vs npm
+bower is a package manager for fron-end
+npm is a package manager for back-end
