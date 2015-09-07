@@ -186,4 +186,5 @@ gulp.task('watch', function(){
 ///////////////////////////////////////////////////////////////
 gulp.task('default', ['compile','bower']);
 gulp.task('dev', ['default','watch']);
+gulp.task('server',['nodemon']);
 
